@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados essenciais -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EcoFuturo — Ideias e projetos para um futuro mais sustentável." />
+  <title>EcoFuturo</title>
+
+  <!-- Fontes via Google Fonts (únicas dependências externas, apenas tipografia) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Folha de estilos principal -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =====================
+       CABEÇALHO / NAV
+  ===================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Logotipo textual -->
+      <a href="#inicio" class="logo" aria-label="EcoFuturo — página inicial">
+        <span class="logo-eco">Eco</span><span class="logo-futuro">Futuro</span>
+      </a>
+
+      <!-- Botão menu mobile (hamburguer) -->
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu de navegação">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Navegação principal -->
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#projetos" class="nav-link">Projetos</a></li>
+          <li><a href="#numeros" class="nav-link">Impacto</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <!-- =====================
+         SEÇÃO HERO
+    ===================== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Sustentabilidade em ação</p>
+          <h1 id="hero-titulo" class="hero-titulo">
+            O futuro que<br />plantamos hoje
+          </h1>
+          <p class="hero-desc">
+            Reunimos ideias, projetos e pessoas comprometidas com um planeta mais equilibrado.
+            Pequenas ações constroem grandes mudanças — e isso começa agora.
+          </p>
+          <div class="hero-actions">
+            <!-- Botão principal: muda o tema da seção hero via JS -->
+            <button class="btn-primario" id="btnTema" aria-live="polite">
+              Mudar atmosfera
+            </button>
+            <a href="#projetos" class="btn-secundario">Ver projetos</a>
+          </div>
+        </div>
+        <!-- Ilustração decorativa SVG inline -->
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+            <!-- Círculo de fundo -->
+            <circle cx="160" cy="160" r="140" fill="currentColor" class="svg-circle" />
+            <!-- Folha estilizada -->
+            <path d="M160 60 C220 100 240 180 160 260 C80 180 100 100 160 60Z" fill="white" opacity="0.15"/>
+            <path d="M160 260 L160 60" stroke="white" stroke-width="2" opacity="0.3"/>
+            <!-- Ramos -->
+            <path d="M160 180 C130 160 110 130 130 100" stroke="white" stroke-width="2" fill="none" opacity="0.4"/>
+            <path d="M160 200 C190 175 210 150 195 115" stroke="white" stroke-width="2" fill="none" opacity="0.4"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         SEÇÃO PROJETOS / CARDS
+    ===================== -->
+    <section class="projetos" id="projetos" aria-labelledby="projetos-titulo">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">O que fazemos</p>
+          <h2 id="projetos-titulo" class="section-titulo">Iniciativas que transformam</h2>
+        </header>
+
+        <div class="cards-grid">
+
+          <!-- Card 1 -->
+          <article class="card" style="--card-accent: #2D4A3E;">
+            <div class="card-icone" aria-hidden="true">🌱</div>
+            <h3 class="card-titulo">Hortas Comunitárias</h3>
+            <p class="card-desc">
+              Transformamos espaços urbanos ociosos em hortas coletivas, aproximando comunidades
+              da produção de alimentos frescos e orgânicos.
+            </p>
+            <a href="#contato" class="card-link">Saiba mais <span aria-hidden="true">→</span></a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" style="--card-accent: #C8973A;">
+            <div class="card-icone" aria-hidden="true">☀️</div>
+            <h3 class="card-titulo">Energia Solar Acessível</h3>
+            <p class="card-desc">
+              Mapeamos e apoiamos a instalação de painéis solares em escolas e centros comunitários,
+              reduzindo custos e emissões.
+            </p>
+            <a href="#contato" class="card-link">Saiba mais <span aria-hidden="true">→</span></a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" style="--card-accent: #5A8A74;">
+            <div class="card-icone" aria-hidden="true">♻️</div>
+            <h3 class="card-titulo">Circuitos de Reciclagem</h3>
+            <p class="card-desc">
+              Criamos redes locais de coleta e reaproveitamento de materiais, gerando renda
+              e diminuindo o descarte inadequado de resíduos.
+            </p>
+            <a href="#contato" class="card-link">Saiba mais <span aria-hidden="true">→</span></a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         SEÇÃO NÚMEROS / IMPACTO
+    ===================== -->
+    <section class="numeros" id="numeros" aria-labelledby="numeros-titulo">
+      <div class="container">
+        <header class="section-header section-header--claro">
+          <p class="section-eyebrow section-eyebrow--claro">Nosso impacto</p>
+          <h2 id="numeros-titulo" class="section-titulo section-titulo--claro">Crescendo juntos</h2>
+        </header>
+
+        <ul class="numeros-grid" role="list">
+          <li class="numero-item">
+            <span class="numero-valor" data-target="3200" aria-label="3200 famílias beneficiadas">0</span>
+            <span class="numero-label">Famílias beneficiadas</span>
+          </li>
+          <li class="numero-item">
+            <span class="numero-valor" data-target="48" aria-label="48 projetos ativos">0</span>
+            <span class="numero-label">Projetos ativos</span>
+          </li>
+          <li class="numero-item">
+            <span class="numero-valor" data-target="120" aria-label="120 toneladas de CO₂ evitadas">0</span>
+            <span class="numero-label">Ton. CO₂ evitadas</span>
+          </li>
+          <li class="numero-item">
+            <span class="numero-valor" data-target="15" aria-label="15 cidades parceiras">0</span>
+            <span class="numero-label">Cidades parceiras</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================
+       RODAPÉ
+  ===================== -->
+  <footer class="site-footer" id="contato" role="contentinfo">
+    <div class="container footer-inner">
+
+      <div class="footer-marca">
+        <p class="footer-logo">
+          <span class="logo-eco">Eco</span><span class="logo-futuro">Futuro</span>
+        </p>
+        <p class="footer-slogan">Semear o presente, colher o futuro.</p>
+      </div>
+
+      <div class="footer-contato">
+        <h3 class="footer-titulo">Contato</h3>
+        <address>
+          <a href="mailto:contato@ecofuturo.org" class="footer-link">contato@ecofuturo.org</a><br />
+          <a href="tel:+554133330000" class="footer-link">(41) 3333-0000</a>
+        </address>
+      </div>
+
+      <div class="footer-redes">
+        <h3 class="footer-titulo">Redes sociais</h3>
+        <ul class="redes-lista" role="list">
+          <li>
+            <!-- Links de redes sociais fictícios com aria-label descritivo -->
+            <a href="#" class="rede-link" aria-label="Instagram do EcoFuturo">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="rede-icone"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="#" class="rede-link" aria-label="LinkedIn do EcoFuturo">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="rede-icone"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" fill="none" stroke="currentColor" stroke-width="2"/><rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="#" class="rede-link" aria-label="YouTube do EcoFuturo">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="rede-icone"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              YouTube
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-base">
+      <p>© 2026 EcoFuturo. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+</html>
